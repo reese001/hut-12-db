@@ -28533,7 +28533,8 @@
     "rare_card": 1,
     "rating": 73,
     "is_victory_card": 0,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8476454.png"
   },
   {
     "card_db_id": 6311,
