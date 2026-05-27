@@ -923,6 +923,7 @@ select:focus-visible {
 
   .preview-panel {
     grid-template-columns: 1fr;
+    order: initial;
   }
 
   .preview-heading,
@@ -992,15 +993,23 @@ select:focus-visible {
     margin-bottom: 22px;
   }
 
-  .section-heading,
-  .preview-heading {
+  .section-heading {
     align-items: stretch;
     flex-direction: column;
     gap: 12px;
   }
 
+  .preview-heading {
+    align-items: start;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
   .preview-heading > span {
-    width: 100%;
+    width: fit-content;
+    min-width: 52px;
     height: 44px;
+    padding: 0 14px;
   }
 }
