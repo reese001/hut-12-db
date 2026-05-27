@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "match:nhl-ids": "node scripts/match-nhl-ids.mjs",
+    "fill:headshot-urls": "node scripts/fill-headshot-urls.mjs"
   },
   "dependencies": {
     "next": "16.2.6",
