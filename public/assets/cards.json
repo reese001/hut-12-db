@@ -837,7 +837,7 @@
     "is_victory_card": 1,
     "is_legend_card": 0,
     "nhl_player_id": 8466378,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8466378.png"
+    "headshot_url": "https://a.espncdn.com/i/headshots/nhl/players/full/883.png"
   },
   {
     "card_db_id": 5701,
@@ -1194,7 +1194,7 @@
     "is_victory_card": 1,
     "is_legend_card": 0,
     "nhl_player_id": 8457063,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8457063.png"
+    "headshot_url": "https://a.espncdn.com/i/headshots/nhl/players/full/539.png"
   },
   {
     "card_db_id": 6393,
@@ -1633,7 +1633,8 @@
     "rare_card": 1,
     "rating": 87,
     "is_victory_card": 1,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8469500.png"
   },
   {
     "card_db_id": 454,
@@ -1759,7 +1760,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8466160,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8466160.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/638.png"
   },
   {
     "card_db_id": 462,
@@ -1864,7 +1865,7 @@
     "is_victory_card": 1,
     "is_legend_card": 0,
     "nhl_player_id": 8464975,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8464975.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/102.png"
   },
   {
     "card_db_id": 426,
@@ -1906,7 +1907,7 @@
     "is_victory_card": 1,
     "is_legend_card": 0,
     "nhl_player_id": 8468598,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8468598.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/985.png&w=350&h=254"
   },
   {
     "card_db_id": 553657503,
@@ -1988,7 +1989,8 @@
     "rare_card": 1,
     "rating": 85,
     "is_victory_card": 1,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8471724.png"
   },
   {
     "card_db_id": 10,
@@ -2156,7 +2158,7 @@
     "is_victory_card": 1,
     "is_legend_card": 0,
     "nhl_player_id": 8470596,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8470596.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2362.png&w=350&h=254"
   },
   {
     "card_db_id": 4415,
@@ -2303,7 +2305,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8471208,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8471208.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2984.png&w=350&h=254"
   },
   {
     "card_db_id": 3200,
@@ -2324,7 +2326,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8470309,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8470309.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2978.png&w=350&h=254"
   },
   {
     "card_db_id": 83,
@@ -2387,7 +2389,7 @@
     "is_victory_card": 1,
     "is_legend_card": 0,
     "nhl_player_id": 8469457,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8469457.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1431.png&w=350&h=254"
   },
   {
     "card_db_id": 2543,
@@ -2408,7 +2410,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8468501,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8468501.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1489.png&w=350&h=254"
   },
   {
     "card_db_id": 553657504,
@@ -2490,7 +2492,8 @@
     "rare_card": 1,
     "rating": 85,
     "is_victory_card": 0,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/20.png&w=350&h=254"
   },
   {
     "card_db_id": 450,
@@ -2532,7 +2535,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8458951,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8458951.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/313.png&w=350&h=254"
   },
   {
     "card_db_id": 630,
@@ -2574,7 +2577,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8467338,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8467338.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/927.png&w=350&h=254"
   },
   {
     "card_db_id": 2171,
@@ -2595,7 +2598,7 @@
     "is_victory_card": 1,
     "is_legend_card": 0,
     "nhl_player_id": 8457981,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8457981.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/839.png&w=350&h=254"
   },
   {
     "card_db_id": 2128,
@@ -2679,7 +2682,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8467344,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8467344.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/769.png&w=350&h=254"
   },
   {
     "card_db_id": 5976,
@@ -3097,7 +3100,8 @@
     "rare_card": 1,
     "rating": 84,
     "is_victory_card": 0,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3682.png"
   },
   {
     "card_db_id": 3950,
@@ -3181,7 +3185,7 @@
     "is_victory_card": 1,
     "is_legend_card": 0,
     "nhl_player_id": 8471234,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8471234.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3195.png&w=350&h=254"
   },
   {
     "card_db_id": 25,
@@ -3536,7 +3540,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8470137,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8470137.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2136.png&w=350&h=254"
   },
   {
     "card_db_id": 1628,
@@ -3597,7 +3601,8 @@
     "rare_card": 1,
     "rating": 84,
     "is_victory_card": 0,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1486.png&w=350&h=254"
   },
   {
     "card_db_id": 669,
@@ -3679,7 +3684,8 @@
     "rare_card": 1,
     "rating": 84,
     "is_victory_card": 0,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8470828.png"
   },
   {
     "card_db_id": 410,
@@ -3700,7 +3706,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8470153,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8470153.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1905.png&w=350&h=254"
   },
   {
     "card_db_id": 1073,
@@ -3763,7 +3769,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8469460,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8469460.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1513.png"
   },
   {
     "card_db_id": 3169,
@@ -3847,7 +3853,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8467346,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8467346.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/292.png&w=350&h=254"
   },
   {
     "card_db_id": 491,
@@ -3910,7 +3916,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8468434,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8468434.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/597.png"
   },
   {
     "card_db_id": 1540,
@@ -3931,7 +3937,7 @@
     "is_victory_card": 1,
     "is_legend_card": 0,
     "nhl_player_id": 8467988,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8467988.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1905.png&w=350&h=254"
   },
   {
     "card_db_id": 1156,
@@ -3952,7 +3958,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8465200,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8465200.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/427.png&w=350&h=254"
   },
   {
     "card_db_id": 1132,
@@ -3973,7 +3979,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8466140,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8466140.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/417.png&w=350&h=254"
   },
   {
     "card_db_id": 832,
@@ -4015,7 +4021,7 @@
     "is_victory_card": 1,
     "is_legend_card": 0,
     "nhl_player_id": 8460621,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8460621.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/12.png"
   },
   {
     "card_db_id": 2323,
@@ -4057,7 +4063,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8466142,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8466142.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/101.png"
   },
   {
     "card_db_id": 1900,
@@ -4141,7 +4147,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8466181,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8466181.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1173.png&w=350&h=254"
   },
   {
     "card_db_id": 963,
@@ -4162,7 +4168,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8460577,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8460577.png"
+    "headshot_url": "https://a.espncdn.com/i/headshots/nhl/players/full/362.png"
   },
   {
     "card_db_id": 7384,
@@ -4519,7 +4525,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8471859,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8471859.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3686.png"
   },
   {
     "card_db_id": 4206,
@@ -4708,7 +4714,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8471216,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8471216.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3148.png&w=350&h=254"
   },
   {
     "card_db_id": 3227,
@@ -4729,7 +4735,7 @@
     "is_victory_card": 1,
     "is_legend_card": 0,
     "nhl_player_id": 8470603,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8470603.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2568.png"
   },
   {
     "card_db_id": 52,
@@ -4855,7 +4861,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8468695,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8468695.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1539.png&w=350&h=254"
   },
   {
     "card_db_id": 3218,
@@ -4918,7 +4924,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8468064,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8468064.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1210.png"
   },
   {
     "card_db_id": 3349,
@@ -4960,7 +4966,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8470273,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8470273.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2109.png&w=350&h=254"
   },
   {
     "card_db_id": 3290,
@@ -5000,7 +5006,8 @@
     "rare_card": 1,
     "rating": 83,
     "is_victory_card": 0,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/88470640.png"
   },
   {
     "card_db_id": 3127,
@@ -5103,7 +5110,8 @@
     "rare_card": 1,
     "rating": 83,
     "is_victory_card": 0,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8472382.png"
   },
   {
     "card_db_id": 95,
@@ -5271,7 +5279,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8469476,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8469476.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1908.png&w=350&h=254"
   },
   {
     "card_db_id": 805,
@@ -5313,7 +5321,7 @@
     "is_victory_card": 1,
     "is_legend_card": 0,
     "nhl_player_id": 8467878,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8467878.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/168.png"
   },
   {
     "card_db_id": 425,
@@ -5397,7 +5405,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8468484,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8468484.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/459.png"
   },
   {
     "card_db_id": 1030,
@@ -5523,7 +5531,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8467412,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8467412.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1100.png"
   },
   {
     "card_db_id": 1583,
@@ -5544,7 +5552,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8459462,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8459462.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/591.png&w=350&h=254"
   },
   {
     "card_db_id": 1148,
@@ -5565,7 +5573,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8460492,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8460492.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/424.png"
   },
   {
     "card_db_id": 2051,
@@ -5670,7 +5678,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8466182,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8466182.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1218.png&w=350&h=254"
   },
   {
     "card_db_id": 2271,
@@ -5691,7 +5699,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8460561,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8460561.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/881.png"
   },
   {
     "card_db_id": 2108,
@@ -5712,7 +5720,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8467463,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8467463.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1091.png&w=350&h=254"
   },
   {
     "card_db_id": 1441,
@@ -5773,7 +5781,8 @@
     "rare_card": 1,
     "rating": 83,
     "is_victory_card": 0,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://alchetron.com/cdn/joe-corvo-608d5875-9ee6-4e6a-8151-9db944a1dbb-resize-750.png"
   },
   {
     "card_db_id": 370,
@@ -5794,7 +5803,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8459444,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8459444.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/66.png"
   },
   {
     "card_db_id": 1677,
@@ -5815,7 +5824,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8464966,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8464966.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/636.png"
   },
   {
     "card_db_id": 324,
@@ -5855,7 +5864,8 @@
     "rare_card": 1,
     "rating": 83,
     "is_victory_card": 0,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8470699.png"
   },
   {
     "card_db_id": 1826,
@@ -5876,7 +5886,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8465192,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8465192.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/703.png"
   },
   {
     "card_db_id": 235,
@@ -5897,7 +5907,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8467332,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8467332.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1129.png&w=350&h=254"
   },
   {
     "card_db_id": 3209,
@@ -5939,7 +5949,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8464981,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8464981.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/822.png&w=350&h=254"
   },
   {
     "card_db_id": 1792,
@@ -5981,7 +5991,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8466158,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8466158.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/343.png"
   },
   {
     "card_db_id": 817,
@@ -6002,7 +6012,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8459628,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8459628.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/305.png"
   },
   {
     "card_db_id": 7694,
@@ -6798,7 +6808,8 @@
     "rare_card": 1,
     "rating": 82,
     "is_victory_card": 0,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://a.espncdn.com/i/headshots/nhl/players/full/3163.png"
   },
   {
     "card_db_id": 3213,
@@ -9285,7 +9296,7 @@
     "is_victory_card": 0,
     "is_legend_card": 0,
     "nhl_player_id": 8470839,
-    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8470839.png"
+    "headshot_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2396.png"
   },
   {
     "card_db_id": 2662,
@@ -48820,7 +48831,8 @@
     "rare_card": 1,
     "rating": 69,
     "is_victory_card": 0,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://assets.nhle.com/mugs/nhl/20252026/latest/8476466.png"
   },
   {
     "card_db_id": 7905,
@@ -54041,7 +54053,8 @@
     "rare_card": 0,
     "rating": 68,
     "is_victory_card": 0,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8475755.png"
   },
   {
     "card_db_id": 6990,
@@ -59767,7 +59780,8 @@
     "rare_card": 0,
     "rating": 67,
     "is_victory_card": 0,
-    "is_legend_card": 0
+    "is_legend_card": 0,
+    "headshot_url": "https://assets.nhle.com/mugs/nhl/latest/8476510.png"
   },
   {
     "card_db_id": 7139,

@@ -53,6 +53,8 @@ const goalieStatLabels = {
 type SortKey = "name" | "rating" | "trainingSlots" | (typeof statKeys)[number][1];
 type SortDirection = "asc" | "desc";
 
+const pageSizeOptions = [25, 50, 100] as const;
+
 function fullName(player: PlayerCard) {
   return `${player.firstName} ${player.lastName}`.trim();
 }
@@ -227,8 +229,12 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
   const [position, setPosition] = useState("all");
   const [sortKey, setSortKey] = useState<SortKey>("rating");
   const [sortDirection, setSortDirection] = useState<SortDirection>("desc");
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState<(typeof pageSizeOptions)[number]>(50);
 
   function changeSort(nextSortKey: SortKey) {
+    setPage(1);
+
     if (nextSortKey === sortKey) {
       setSortDirection((current) => (current === "desc" ? "asc" : "desc"));
       return;
@@ -283,12 +289,21 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
         }
 
         return fullName(a).localeCompare(fullName(b));
-      })
-      .slice(0, 160);
+      });
   }, [playerType, players, position, query, sortDirection, sortKey, tier]);
 
-  const selectedIsVisible = selected ? filtered.some((player) => player.id === selected.id) : false;
-  const activePlayer = selectedIsVisible ? selected : filtered[0] ?? null;
+  const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
+  const currentPage = Math.min(page, totalPages);
+  const pageStart = filtered.length === 0 ? 0 : (currentPage - 1) * pageSize + 1;
+  const pageEnd = Math.min(currentPage * pageSize, filtered.length);
+  const pagedPlayers = useMemo(() => {
+    const start = (currentPage - 1) * pageSize;
+
+    return filtered.slice(start, start + pageSize);
+  }, [currentPage, filtered, pageSize]);
+
+  const selectedIsVisible = selected ? pagedPlayers.some((player) => player.id === selected.id) : false;
+  const activePlayer = selectedIsVisible ? selected : pagedPlayers[0] ?? null;
 
   if (players.length === 0) {
     return (
@@ -340,7 +355,10 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
                 <SearchIcon />
                 <input
                   value={query}
-                  onChange={(event) => setQuery(event.target.value)}
+                  onChange={(event) => {
+                    setQuery(event.target.value);
+                    setPage(1);
+                  }}
                   placeholder="Search players..."
                   aria-label="Search players"
                 />
@@ -352,6 +370,7 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
                   onChange={(event) => {
                     setPlayerType(event.target.value);
                     setPosition("all");
+                    setPage(1);
                   }}
                 >
                   <option value="skaters">Skaters</option>
@@ -361,7 +380,13 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
               </label>
               <label>
                 <span className="sr-only">Card tier</span>
-                <select value={tier} onChange={(event) => setTier(event.target.value)}>
+                <select
+                  value={tier}
+                  onChange={(event) => {
+                    setTier(event.target.value);
+                    setPage(1);
+                  }}
+                >
                   <option value="all">All cards</option>
                   <option value="legend">Legends</option>
                   <option value="rare">Rare</option>
@@ -372,7 +397,10 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
                 <span className="sr-only">Position</span>
                 <select
                   value={playerType === "goalies" ? "G" : position}
-                  onChange={(event) => setPosition(event.target.value)}
+                  onChange={(event) => {
+                    setPosition(event.target.value);
+                    setPage(1);
+                  }}
                   disabled={playerType === "goalies"}
                 >
                   <option value="all">All positions</option>
@@ -408,7 +436,7 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
                 </button>
               </div>
               <div className="player-list">
-                {filtered.map((player) => (
+                {pagedPlayers.map((player) => (
                   <PlayerRow
                     key={player.id}
                     player={player}
@@ -422,6 +450,42 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
                     <span>Try adjusting your search or filters.</span>
                   </div>
                 ) : null}
+              </div>
+            </div>
+
+            <div className="pagination-bar">
+              <span>
+                {pageStart.toLocaleString()}-{pageEnd.toLocaleString()} of {filtered.length.toLocaleString()}
+              </span>
+              <div className="pagination-controls">
+                <label>
+                  <span className="sr-only">Cards per page</span>
+                  <select
+                    value={pageSize}
+                    onChange={(event) => {
+                      setPageSize(Number(event.target.value) as (typeof pageSizeOptions)[number]);
+                      setPage(1);
+                    }}
+                  >
+                    {pageSizeOptions.map((option) => (
+                      <option key={option} value={option}>
+                        {option} / page
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <button onClick={() => setPage((current) => Math.max(1, current - 1))} disabled={currentPage === 1}>
+                  Previous
+                </button>
+                <strong>
+                  Page {currentPage} of {totalPages}
+                </strong>
+                <button
+                  onClick={() => setPage((current) => Math.min(totalPages, current + 1))}
+                  disabled={currentPage === totalPages}
+                >
+                  Next
+                </button>
               </div>
             </div>
           </section>

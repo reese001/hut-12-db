@@ -478,6 +478,91 @@ select:focus-visible {
   margin-top: 6px;
 }
 
+.pagination-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.pagination-bar > span {
+  font-variant-numeric: tabular-nums;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination-controls label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.pagination-controls label::after {
+  position: absolute;
+  right: 12px;
+  width: 7px;
+  height: 7px;
+  border-right: 1.75px solid var(--text-muted);
+  border-bottom: 1.75px solid var(--text-muted);
+  content: "";
+  pointer-events: none;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.pagination-controls select {
+  height: 100%;
+  min-width: 112px;
+  border: 0;
+  appearance: none;
+  background: transparent;
+  padding: 0 32px 0 12px;
+  color: var(--text-primary);
+  font-weight: 700;
+  outline: 0;
+}
+
+.pagination-controls button {
+  min-height: 38px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  padding: 0 13px;
+  color: var(--text-primary);
+  font-weight: 800;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  border-color: var(--accent-border);
+  background: var(--accent-soft);
+  color: #1d4ed8;
+}
+
+.pagination-controls button:disabled {
+  cursor: not-allowed;
+  color: var(--text-muted);
+  opacity: 0.72;
+}
+
+.pagination-controls strong {
+  min-width: 92px;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  text-align: center;
+}
+
 .preview-empty {
   display: flex;
   flex-direction: column;
@@ -876,6 +961,15 @@ select:focus-visible {
   .avatar-wrap {
     width: 34px;
     height: 34px;
+  }
+
+  .pagination-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pagination-controls {
+    flex-wrap: wrap;
   }
 }
 
