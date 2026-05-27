@@ -125,20 +125,6 @@ select:focus-visible {
   object-fit: contain;
 }
 
-.count-pill {
-  flex: 0 0 auto;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  background: var(--surface);
-  box-shadow: var(--shadow-sm);
-  padding: 8px 14px;
-  color: var(--text-primary);
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1;
-  white-space: nowrap;
-}
-
 .page-wrap {
   width: min(100%, 1280px);
   margin: 0 auto;
@@ -978,11 +964,6 @@ select:focus-visible {
   .brand-lockup {
     font-size: 11px;
     letter-spacing: 0.08em;
-  }
-
-  .count-pill {
-    padding-inline: 10px;
-    font-size: 13px;
   }
 
   .page-wrap {

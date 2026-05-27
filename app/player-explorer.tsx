@@ -328,9 +328,6 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
             />
             <span>NHL 12 HUT Database</span>
           </div>
-          <div className="count-pill" aria-label={`${players.length.toLocaleString()} total cards`}>
-            {players.length.toLocaleString()} cards
-          </div>
         </div>
       </header>
 
