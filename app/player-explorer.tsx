@@ -187,9 +187,9 @@ function PlayerCardPreview({ player }: { player: PlayerCard }) {
   const displayName = shortCardName(player);
   const verticalName = rareClass === "rare" || rareClass === "base";
   const nameLengthClass = verticalName
-    ? displayName.length > 14
+    ? displayName.length > 10
       ? "extra-long"
-      : displayName.length > 10
+      : displayName.length > 8
         ? "long"
         : ""
     : displayName.length > 22
