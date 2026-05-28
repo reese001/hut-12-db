@@ -65,7 +65,7 @@ function fullName(player: PlayerCard) {
 
 function shortCardName(player: PlayerCard) {
   const initial = player.firstName ? `${player.firstName[0]}. ` : "";
-  return `${initial}${player.lastName}`.toUpperCase();
+  return `${initial}${player.lastName}`;
 }
 
 function positionName(positionId: number) {
@@ -417,7 +417,7 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
             />
           </div>
           <div className="brand-block">
-            <h1>ZAMBONI.GG</h1>
+            <h1>Zamboni.gg</h1>
             <p>NHL 12 HUT DATABASE</p>
           </div>
           <div className="total-cards">
@@ -549,7 +549,7 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
           <section className="workspace-panel" aria-label="Player search and results">
             <div className="section-heading">
               <div>
-                <h2>Player cards</h2>
+                <h2>Player Cards</h2>
               </div>
             </div>
 
@@ -644,7 +644,7 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
                 <div className="preview-heading">
                   <div>
                     <p>Selected card</p>
-                    <h2>{fullName(activePlayer)}</h2>
+                    <h2 className="player-name">{fullName(activePlayer)}</h2>
                   </div>
                   <span>{activePlayer.rating}</span>
                 </div>
