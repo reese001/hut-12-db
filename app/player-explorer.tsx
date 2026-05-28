@@ -13,7 +13,10 @@ export type PlayerCard = {
   lastName: string;
   defense: number;
   nation: number;
+  nationName: string;
   teamId: number;
+  teamName: string;
+  leagueName: string;
   positionId: number;
   checking: number;
   shooting: number;
@@ -229,9 +232,7 @@ function PlayerRow({
         </span>
         <span className="player-copy">
           <strong>{fullName(player)}</strong>
-          <small>
-            {positionName(player.positionId)} / {cardTier(player)}
-          </small>
+          <small>{positionName(player.positionId)} / {player.teamName}</small>
         </span>
       </span>
       <b className="overall-cell">{player.rating}</b>
@@ -252,6 +253,9 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
   const [playerType, setPlayerType] = useState("skaters");
   const [tier, setTier] = useState("all");
   const [position, setPosition] = useState("all");
+  const [league, setLeague] = useState("all");
+  const [team, setTeam] = useState("all");
+  const [nation, setNation] = useState("all");
   const [sortKey, setSortKey] = useState<SortKey>("rating");
   const [sortDirection, setSortDirection] = useState<SortDirection>("desc");
   const [page, setPage] = useState(1);
@@ -268,6 +272,50 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
     setSortKey(nextSortKey);
     setSortDirection(nextSortKey === "name" ? "asc" : "desc");
   }
+
+  const leagues = useMemo(
+    () =>
+      [...new Set(players.map((player) => player.leagueName).filter(Boolean))].sort((a, b) => {
+        if (a === "NHL") {
+          return -1;
+        }
+
+        if (b === "NHL") {
+          return 1;
+        }
+
+        return a.localeCompare(b);
+      }),
+    [players],
+  );
+  const teams = useMemo(
+    () =>
+      [
+        ...new Map(
+          players
+            .filter((player) => league !== "all" && player.leagueName === league)
+            .map((player) => [player.teamName, player.teamName]),
+        ).values(),
+      ].sort(),
+    [league, players],
+  );
+  const nations = useMemo(
+    () =>
+      [
+        ...new Set(
+          players
+            .filter(
+              (player) =>
+                playerType === "all" ||
+                (playerType === "skaters" && player.positionId !== 5) ||
+                (playerType === "goalies" && player.positionId === 5),
+            )
+            .map((player) => player.nationName)
+            .filter(Boolean),
+        ),
+      ].sort(),
+    [playerType, players],
+  );
 
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -287,8 +335,11 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
           (playerType === "goalies" && player.positionId === 5);
         const matchesPosition =
           playerType === "goalies" || position === "all" || positionName(player.positionId) === position;
+        const matchesLeague = league === "all" || player.leagueName === league;
+        const matchesTeam = team === "all" || player.teamName === team;
+        const matchesNation = nation === "all" || player.nationName === nation;
 
-        return matchesText && matchesTier && matchesType && matchesPosition;
+        return matchesText && matchesTier && matchesType && matchesPosition && matchesLeague && matchesTeam && matchesNation;
       })
       .sort((a, b) => {
         const direction = sortDirection === "asc" ? 1 : -1;
@@ -315,7 +366,7 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
 
         return fullName(a).localeCompare(fullName(b));
       });
-  }, [playerType, players, position, query, sortDirection, sortKey, tier]);
+  }, [league, nation, playerType, players, position, query, sortDirection, sortKey, team, tier]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
   const currentPage = Math.min(page, totalPages);
@@ -390,6 +441,7 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
                   onChange={(event) => {
                     setPlayerType(event.target.value);
                     setPosition("all");
+                    setNation("all");
                     setPage(1);
                   }}
                 >
@@ -430,6 +482,60 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
                   <option value="LD">LD</option>
                   <option value="RD">RD</option>
                   <option value="G">G</option>
+                </select>
+              </label>
+              <label>
+                <span className="sr-only">League</span>
+                <select
+                  value={league}
+                  onChange={(event) => {
+                    setLeague(event.target.value);
+                    setTeam("all");
+                    setPage(1);
+                  }}
+                >
+                  <option value="all">All leagues</option>
+                  {leagues.map((leagueName) => (
+                    <option key={leagueName} value={leagueName}>
+                      {leagueName}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              {league !== "all" ? (
+                <label>
+                  <span className="sr-only">Team</span>
+                  <select
+                    value={team}
+                    onChange={(event) => {
+                      setTeam(event.target.value);
+                      setPage(1);
+                    }}
+                  >
+                    <option value="all">All teams</option>
+                    {teams.map((teamName) => (
+                      <option key={teamName} value={teamName}>
+                        {teamName}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              ) : null}
+              <label>
+                <span className="sr-only">Nation</span>
+                <select
+                  value={nation}
+                  onChange={(event) => {
+                    setNation(event.target.value);
+                    setPage(1);
+                  }}
+                >
+                  <option value="all">All nations</option>
+                  {nations.map((nationName) => (
+                    <option key={nationName} value={nationName}>
+                      {nationName}
+                    </option>
+                  ))}
                 </select>
               </label>
             </div>
@@ -541,6 +647,18 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
                   <div className="meta-row">
                     <span>Position</span>
                     <strong>{positionName(activePlayer.positionId)}</strong>
+                  </div>
+                  <div className="meta-row">
+                    <span>Team</span>
+                    <strong>{activePlayer.teamName}</strong>
+                  </div>
+                  <div className="meta-row">
+                    <span>League</span>
+                    <strong>{activePlayer.leagueName || "Unknown"}</strong>
+                  </div>
+                  <div className="meta-row">
+                    <span>Nation</span>
+                    <strong>{activePlayer.nationName}</strong>
                   </div>
                   <div className="meta-row">
                     <span>Career</span>

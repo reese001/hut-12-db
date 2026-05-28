@@ -3,6 +3,7 @@ import path from "node:path";
 import PlayerExplorer, { type PlayerCard } from "./player-explorer";
 
 const cardsPath = path.join(process.cwd(), "public", "assets", "cards.json");
+const idMapsPath = path.join(process.cwd(), "public", "assets", "id-maps.json");
 
 type RawPlayerCard = {
   card_db_id: number;
@@ -26,10 +27,30 @@ type RawPlayerCard = {
   headshot_url?: string | null;
 };
 
+type TeamMapEntry = {
+  name: string;
+  league: string;
+};
+
+type IdMaps = {
+  teams: Record<string, TeamMapEntry>;
+  nations: Record<string, string>;
+};
+
 async function getPlayerCards(): Promise<PlayerCard[]> {
   const rawCards = JSON.parse(await readFile(cardsPath, "utf8")) as RawPlayerCard[];
+  const idMaps = JSON.parse(await readFile(idMapsPath, "utf8")) as IdMaps;
 
   return rawCards.map((card) => ({
+    ...(idMaps.teams[String(card.team_id)]
+      ? {
+          teamName: idMaps.teams[String(card.team_id)].name,
+          leagueName: idMaps.teams[String(card.team_id)].league,
+        }
+      : {
+          teamName: `Team ${card.team_id}`,
+          leagueName: "",
+        }),
     id: String(card.card_db_id),
     skating: card.skating,
     career: card.career,
@@ -37,6 +58,7 @@ async function getPlayerCards(): Promise<PlayerCard[]> {
     lastName: card.last_name,
     defense: card.defense,
     nation: card.nation,
+    nationName: idMaps.nations[String(card.nation)] ?? `Nation ${card.nation}`,
     teamId: card.team_id,
     positionId: card.position,
     checking: card.checking,

@@ -1,0 +1,770 @@
+{
+  "teams": {
+    "0": {
+      "name": "Anaheim Ducks",
+      "league": "NHL"
+    },
+    "1": {
+      "name": "Winnipeg Jets",
+      "league": "NHL"
+    },
+    "2": {
+      "name": "Boston Bruins",
+      "league": "NHL"
+    },
+    "3": {
+      "name": "Buffalo Sabres",
+      "league": "NHL"
+    },
+    "4": {
+      "name": "Calgary Flames",
+      "league": "NHL"
+    },
+    "5": {
+      "name": "Carolina Hurricanes",
+      "league": "NHL"
+    },
+    "6": {
+      "name": "Chicago Blackhawks",
+      "league": "NHL"
+    },
+    "7": {
+      "name": "Colorado Avalanche",
+      "league": "NHL"
+    },
+    "8": {
+      "name": "Columbus Blue Jackets",
+      "league": "NHL"
+    },
+    "9": {
+      "name": "Dallas Stars",
+      "league": "NHL"
+    },
+    "10": {
+      "name": "Detroit Red Wings",
+      "league": "NHL"
+    },
+    "11": {
+      "name": "Edmonton Oilers",
+      "league": "NHL"
+    },
+    "12": {
+      "name": "Florida Panthers",
+      "league": "NHL"
+    },
+    "13": {
+      "name": "Los Angeles Kings",
+      "league": "NHL"
+    },
+    "14": {
+      "name": "Minnesota Wild",
+      "league": "NHL"
+    },
+    "15": {
+      "name": "Montreal Canadiens",
+      "league": "NHL"
+    },
+    "16": {
+      "name": "Nashville Predators",
+      "league": "NHL"
+    },
+    "17": {
+      "name": "New Jersey Devils",
+      "league": "NHL"
+    },
+    "18": {
+      "name": "New York Islanders",
+      "league": "NHL"
+    },
+    "19": {
+      "name": "New York Rangers",
+      "league": "NHL"
+    },
+    "20": {
+      "name": "Ottawa Senators",
+      "league": "NHL"
+    },
+    "21": {
+      "name": "Philadelphia Flyers",
+      "league": "NHL"
+    },
+    "22": {
+      "name": "Phoenix Coyotes",
+      "league": "NHL"
+    },
+    "23": {
+      "name": "Pittsburgh Penguins",
+      "league": "NHL"
+    },
+    "24": {
+      "name": "St. Louis Blues",
+      "league": "NHL"
+    },
+    "25": {
+      "name": "San Jose Sharks",
+      "league": "NHL"
+    },
+    "26": {
+      "name": "Tampa Bay Lightning",
+      "league": "NHL"
+    },
+    "27": {
+      "name": "Toronto Maple Leafs",
+      "league": "NHL"
+    },
+    "28": {
+      "name": "Vancouver Canucks",
+      "league": "NHL"
+    },
+    "29": {
+      "name": "Washington Capitals",
+      "league": "NHL"
+    },
+    "32": {
+      "name": "Abbotsford Heat",
+      "league": "AHL"
+    },
+    "33": {
+      "name": "Adirondack Phantoms",
+      "league": "AHL"
+    },
+    "34": {
+      "name": "Albany Devils",
+      "league": "AHL"
+    },
+    "35": {
+      "name": "Binghamton Senators",
+      "league": "AHL"
+    },
+    "36": {
+      "name": "Bridgeport Sound Tigers",
+      "league": "AHL"
+    },
+    "37": {
+      "name": "Charlotte Checkers",
+      "league": "AHL"
+    },
+    "38": {
+      "name": "Chicago Wolves",
+      "league": "AHL"
+    },
+    "39": {
+      "name": "Connecticut Whale",
+      "league": "AHL"
+    },
+    "40": {
+      "name": "Grand Rapids Griffins",
+      "league": "AHL"
+    },
+    "41": {
+      "name": "Hamilton Bulldogs",
+      "league": "AHL"
+    },
+    "42": {
+      "name": "Hershey Bears",
+      "league": "AHL"
+    },
+    "43": {
+      "name": "Houston Aeros",
+      "league": "AHL"
+    },
+    "44": {
+      "name": "Lake Erie Monsters",
+      "league": "AHL"
+    },
+    "45": {
+      "name": "Manchester Monarchs",
+      "league": "AHL"
+    },
+    "46": {
+      "name": "Milwaukee Admirals",
+      "league": "AHL"
+    },
+    "47": {
+      "name": "Norfolk Admirals",
+      "league": "AHL"
+    },
+    "48": {
+      "name": "Oklahoma City Barons",
+      "league": "AHL"
+    },
+    "49": {
+      "name": "Peoria Rivermen",
+      "league": "AHL"
+    },
+    "50": {
+      "name": "Portland Pirates",
+      "league": "AHL"
+    },
+    "51": {
+      "name": "Providence Bruins",
+      "league": "AHL"
+    },
+    "52": {
+      "name": "Rochester Americans",
+      "league": "AHL"
+    },
+    "53": {
+      "name": "Rockford Icehogs",
+      "league": "AHL"
+    },
+    "54": {
+      "name": "San Antonio Rampage",
+      "league": "AHL"
+    },
+    "55": {
+      "name": "Springfield Falcons",
+      "league": "AHL"
+    },
+    "56": {
+      "name": "St. John's IceCaps",
+      "league": "AHL"
+    },
+    "57": {
+      "name": "Syracuse Crunch",
+      "league": "AHL"
+    },
+    "58": {
+      "name": "Texas Stars",
+      "league": "AHL"
+    },
+    "59": {
+      "name": "Toronto Marlies",
+      "league": "AHL"
+    },
+    "60": {
+      "name": "Wilkes-Barre/Scranton Penguins",
+      "league": "AHL"
+    },
+    "61": {
+      "name": "Worcester Sharks",
+      "league": "AHL"
+    },
+    "62": {
+      "name": "AIK",
+      "league": "Elitserien"
+    },
+    "63": {
+      "name": "Brynäs IF",
+      "league": "Elitserien"
+    },
+    "64": {
+      "name": "Djurgårdens IF",
+      "league": "Elitserien"
+    },
+    "65": {
+      "name": "Frölunda HC",
+      "league": "Elitserien"
+    },
+    "66": {
+      "name": "Fårjestads BK",
+      "league": "Elitserien"
+    },
+    "67": {
+      "name": "HV 71",
+      "league": "Elitserien"
+    },
+    "68": {
+      "name": "Linköping HC",
+      "league": "Elitserien"
+    },
+    "69": {
+      "name": "Luleå HF",
+      "league": "Elitserien"
+    },
+    "70": {
+      "name": "MoDo Hockey",
+      "league": "Elitserien"
+    },
+    "71": {
+      "name": "Skellefteå AIK",
+      "league": "Elitserien"
+    },
+    "72": {
+      "name": "Timrå IK",
+      "league": "Elitserien"
+    },
+    "73": {
+      "name": "Växjö Lakers",
+      "league": "Elitserien"
+    },
+    "74": {
+      "name": "HC Ässät Pori",
+      "league": "SM-liiga"
+    },
+    "75": {
+      "name": "Espoo Blues",
+      "league": "SM-liiga"
+    },
+    "76": {
+      "name": "IFK",
+      "league": "SM-liiga"
+    },
+    "77": {
+      "name": "HPK",
+      "league": "SM-liiga"
+    },
+    "78": {
+      "name": "Ilves",
+      "league": "SM-liiga"
+    },
+    "79": {
+      "name": "Jokerit",
+      "league": "SM-liiga"
+    },
+    "80": {
+      "name": "JYP Jyväskylä",
+      "league": "SM-liiga"
+    },
+    "81": {
+      "name": "Kalpa",
+      "league": "SM-liiga"
+    },
+    "82": {
+      "name": "Kärpät",
+      "league": "SM-liiga"
+    },
+    "83": {
+      "name": "Lukko",
+      "league": "SM-liiga"
+    },
+    "84": {
+      "name": "Lahti Pelicans",
+      "league": "SM-liiga"
+    },
+    "85": {
+      "name": "SaiPa",
+      "league": "SM-liiga"
+    },
+    "86": {
+      "name": "Tappara",
+      "league": "SM-liiga"
+    },
+    "87": {
+      "name": "TPS",
+      "league": "SM-liiga"
+    },
+    "88": {
+      "name": "Augsburg Panthers",
+      "league": "DEL"
+    },
+    "89": {
+      "name": "Eisbären Berlin",
+      "league": "DEL"
+    },
+    "90": {
+      "name": "DEG Metro Stars",
+      "league": "DEL"
+    },
+    "91": {
+      "name": "Hamburg Freezers",
+      "league": "DEL"
+    },
+    "92": {
+      "name": "Hannover Scorpions",
+      "league": "DEL"
+    },
+    "93": {
+      "name": "ERC Ingolstadt",
+      "league": "DEL"
+    },
+    "94": {
+      "name": "Iserlohn Roosters",
+      "league": "DEL"
+    },
+    "95": {
+      "name": "Krefeld Pinguine",
+      "league": "DEL"
+    },
+    "96": {
+      "name": "Kölner Haie",
+      "league": "DEL"
+    },
+    "97": {
+      "name": "Adler Mannheim",
+      "league": "DEL"
+    },
+    "98": {
+      "name": "Munich EHC",
+      "league": "DEL"
+    },
+    "99": {
+      "name": "Straubing Tigers",
+      "league": "DEL"
+    },
+    "100": {
+      "name": "Nürnberg Ice Tigers",
+      "league": "DEL"
+    },
+    "101": {
+      "name": "Grizzlys Wolfsburg",
+      "league": "DEL"
+    },
+    "102": {
+      "name": "BK Mladá Boleslav",
+      "league": "ELH"
+    },
+    "103": {
+      "name": "HC Kometa Brno",
+      "league": "ELH"
+    },
+    "104": {
+      "name": "Mountfield HK",
+      "league": "ELH"
+    },
+    "105": {
+      "name": "HC Energie Karlovy Vary",
+      "league": "ELH"
+    },
+    "106": {
+      "name": "Rytíři Kladno",
+      "league": "ELH"
+    },
+    "107": {
+      "name": "Bílí Tygři Liberec",
+      "league": "ELH"
+    },
+    "108": {
+      "name": "HC Benzina Litvínov",
+      "league": "ELH"
+    },
+    "109": {
+      "name": "HC Dynamo Pardubice",
+      "league": "ELH"
+    },
+    "110": {
+      "name": "HC Plzeň",
+      "league": "ELH"
+    },
+    "111": {
+      "name": "Slavia Praha HC",
+      "league": "ELH"
+    },
+    "112": {
+      "name": "HC Sparta Praha",
+      "league": "ELH"
+    },
+    "113": {
+      "name": "HC Oceláři Třinec",
+      "league": "ELH"
+    },
+    "114": {
+      "name": "HC Vítkovice",
+      "league": "ELH"
+    },
+    "115": {
+      "name": "Zlin ZPS HC",
+      "league": "ELH"
+    },
+    "116": {
+      "name": "HC Ambrì-Piotta",
+      "league": "National League"
+    },
+    "117": {
+      "name": "SC Bern",
+      "league": "National League"
+    },
+    "118": {
+      "name": "EHC Biel-Bienne",
+      "league": "National League"
+    },
+    "119": {
+      "name": "HC Davos",
+      "league": "National League"
+    },
+    "120": {
+      "name": "HC Fribourg",
+      "league": "National League"
+    },
+    "121": {
+      "name": "Genève-Servette HC",
+      "league": "National League"
+    },
+    "122": {
+      "name": "Kloten Flyers",
+      "league": "National League"
+    },
+    "123": {
+      "name": "HC Lugano",
+      "league": "National League"
+    },
+    "124": {
+      "name": "Rapperswil Lakers",
+      "league": "National League"
+    },
+    "125": {
+      "name": "SCL Tigers",
+      "league": "National League"
+    },
+    "126": {
+      "name": "ZSC Lions",
+      "league": "National League"
+    },
+    "127": {
+      "name": "EV Zug",
+      "league": "National League"
+    },
+    "149": {
+      "name": "Barrie Colts",
+      "league": "OHL"
+    },
+    "150": {
+      "name": "Belleville Bulls",
+      "league": "OHL"
+    },
+    "151": {
+      "name": "Brampton Batallion",
+      "league": "OHL"
+    },
+    "152": {
+      "name": "Erie Otters",
+      "league": "OHL"
+    },
+    "153": {
+      "name": "Guelph Storm",
+      "league": "OHL"
+    },
+    "154": {
+      "name": "Kingston Frontenacs",
+      "league": "OHL"
+    },
+    "155": {
+      "name": "Kitchener Rangers",
+      "league": "OHL"
+    },
+    "156": {
+      "name": "London Knights",
+      "league": "OHL"
+    },
+    "157": {
+      "name": "Mississauga St. Michael's Majors",
+      "league": "OHL"
+    },
+    "158": {
+      "name": "Niagara Ice Dogs",
+      "league": "OHL"
+    },
+    "159": {
+      "name": "Oshawa Generals",
+      "league": "OHL"
+    },
+    "160": {
+      "name": "Ottawa 67's",
+      "league": "OHL"
+    },
+    "161": {
+      "name": "Owen Sound Attack",
+      "league": "OHL"
+    },
+    "162": {
+      "name": "Peterborough Petes",
+      "league": "OHL"
+    },
+    "163": {
+      "name": "Plymouth Whalers",
+      "league": "OHL"
+    },
+    "164": {
+      "name": "Saginaw Spirit",
+      "league": "OHL"
+    },
+    "165": {
+      "name": "Sarnia Sting",
+      "league": "OHL"
+    },
+    "166": {
+      "name": "Sault Ste. Marie Greyhounds",
+      "league": "OHL"
+    },
+    "167": {
+      "name": "Sudbury Wolves",
+      "league": "OHL"
+    },
+    "168": {
+      "name": "Windsor Spitfires",
+      "league": "OHL"
+    },
+    "169": {
+      "name": "Acadie-Bathurst Titan",
+      "league": "QMJHL"
+    },
+    "170": {
+      "name": "Baie-Comeau Drakkar",
+      "league": "QMJHL"
+    },
+    "171": {
+      "name": "Blainville-Boisbriand Armada",
+      "league": "QMJHL"
+    },
+    "172": {
+      "name": "Cape Breton Screaming Eagles",
+      "league": "QMJHL"
+    },
+    "173": {
+      "name": "Chicoutimi Saguenéens",
+      "league": "QMJHL"
+    },
+    "174": {
+      "name": "Drummondville Voltigeurs",
+      "league": "QMJHL"
+    },
+    "175": {
+      "name": "Gatineau Olympiques",
+      "league": "QMJHL"
+    },
+    "176": {
+      "name": "Halifax Mooseheads",
+      "league": "QMJHL"
+    },
+    "177": {
+      "name": "Moncton Wildcats",
+      "league": "QMJHL"
+    },
+    "178": {
+      "name": "P.E.I Rockets",
+      "league": "QMJHL"
+    },
+    "179": {
+      "name": "Quebec Remparts",
+      "league": "QMJHL"
+    },
+    "180": {
+      "name": "Rimouski Oceanic",
+      "league": "QMJHL"
+    },
+    "181": {
+      "name": "Rouyn-Noranda Huskies",
+      "league": "QMJHL"
+    },
+    "182": {
+      "name": "Saint John Seadogs",
+      "league": "QMJHL"
+    },
+    "183": {
+      "name": "Shawinigan Cataractes",
+      "league": "QMJHL"
+    },
+    "184": {
+      "name": "Val-d'Or Foreurs",
+      "league": "QMJHL"
+    },
+    "185": {
+      "name": "Victoriaville Tigres",
+      "league": "QMJHL"
+    },
+    "186": {
+      "name": "Brandon Wheat Kings",
+      "league": "WHL"
+    },
+    "187": {
+      "name": "Calgary Hitmen",
+      "league": "WHL"
+    },
+    "188": {
+      "name": "Edmonton Oil Kings",
+      "league": "WHL"
+    },
+    "189": {
+      "name": "Everett Silvertips",
+      "league": "WHL"
+    },
+    "190": {
+      "name": "Kamloops Blazers",
+      "league": "WHL"
+    },
+    "191": {
+      "name": "Kelowna Rockets",
+      "league": "WHL"
+    },
+    "192": {
+      "name": "Kootenay Ice",
+      "league": "WHL"
+    },
+    "193": {
+      "name": "Lethbridge Hurricanes",
+      "league": "WHL"
+    },
+    "194": {
+      "name": "Medicine Hat Tigers",
+      "league": "WHL"
+    },
+    "195": {
+      "name": "Moose Jaw Warriors",
+      "league": "WHL"
+    },
+    "196": {
+      "name": "Portland Winterhawks",
+      "league": "WHL"
+    },
+    "197": {
+      "name": "Prince Albert Raiders",
+      "league": "WHL"
+    },
+    "198": {
+      "name": "Prince George Cougars",
+      "league": "WHL"
+    },
+    "199": {
+      "name": "Red Deer Rebels",
+      "league": "WHL"
+    },
+    "200": {
+      "name": "Regina Pats",
+      "league": "WHL"
+    },
+    "201": {
+      "name": "Saskatoon Blades",
+      "league": "WHL"
+    },
+    "202": {
+      "name": "Seattle Thunderbirds",
+      "league": "WHL"
+    },
+    "203": {
+      "name": "Spokane Chiefs",
+      "league": "WHL"
+    },
+    "204": {
+      "name": "Swift Current Broncos",
+      "league": "WHL"
+    },
+    "205": {
+      "name": "Tri-City Americans",
+      "league": "WHL"
+    },
+    "206": {
+      "name": "Vancouver Giants",
+      "league": "WHL"
+    },
+    "207": {
+      "name": "Victoria Royals",
+      "league": "WHL"
+    }
+  },
+  "nations": {
+    "0": "Canada",
+    "14": "United States",
+    "66": "Denmark",
+    "67": "Finland",
+    "68": "Norway",
+    "69": "Sweden",
+    "70": "Belarus",
+    "72": "Kazakhstan",
+    "74": "Latvia",
+    "75": "Lithuania",
+    "76": "Russia",
+    "77": "Ukraine",
+    "78": "Austria",
+    "82": "Czech Republic",
+    "83": "Great Britain",
+    "84": "France",
+    "85": "Germany",
+    "87": "Italy",
+    "91": "Poland",
+    "95": "Slovakia",
+    "96": "Slovenia",
+    "97": "Switzerland",
+    "107": "Israel",
+    "127": "Montenegro"
+  }
+}
