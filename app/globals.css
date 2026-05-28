@@ -126,9 +126,7 @@ select option {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background:
-    linear-gradient(180deg, rgb(3 7 18 / 0.22), transparent 28%, rgb(3 7 18 / 0.38)),
-    radial-gradient(circle at 50% 48%, transparent 0 23%, rgb(91 124 255 / 0.055) 24%, transparent 42%);
+  background: linear-gradient(180deg, rgb(3 7 18 / 0.22), transparent 28%, rgb(3 7 18 / 0.38));
   content: "";
   pointer-events: none;
 }
@@ -857,7 +855,7 @@ select option {
 
 .base .stat-stack {
   top: 58%;
-  right: 1%;
+  right: 2%;
   width: 54%;
   gap: 7px;
 }
