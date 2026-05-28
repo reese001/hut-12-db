@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
+import { BGPattern } from "@/components/ui/bg-pattern";
+import { Component as GradientBackground } from "@/components/ui/gradient-background-4";
 
 export type PlayerCard = {
   id: string;
@@ -50,7 +52,8 @@ const goalieStatLabels = {
   defense: "RBC",
 } as const;
 
-type SortKey = "name" | "rating" | "trainingSlots" | (typeof statKeys)[number][1];
+type DerivedSortKey = "potentialRating" | "salary";
+type SortKey = "name" | "rating" | "career" | "trainingSlots" | DerivedSortKey | (typeof statKeys)[number][1];
 type SortDirection = "asc" | "desc";
 
 const pageSizeOptions = [25, 50, 100] as const;
@@ -82,6 +85,28 @@ function listStatLabel(playerType: string, positionFilter: string, label: string
   }
 
   return label;
+}
+
+function potentialRating(player: PlayerCard) {
+  return Math.ceil(player.rating + player.trainingSlots * 1.5);
+}
+
+function salary(player: PlayerCard) {
+  const sum = player.skating + player.shooting + player.hands + player.checking + player.defense;
+
+  return Math.round((sum * sum * sum) / 500000) * 10 - 50;
+}
+
+function sortValue(player: PlayerCard, key: Exclude<SortKey, "name">) {
+  if (key === "potentialRating") {
+    return potentialRating(player);
+  }
+
+  if (key === "salary") {
+    return salary(player);
+  }
+
+  return player[key];
 }
 
 function cardTier(player: PlayerCard) {
@@ -151,11 +176,7 @@ function SortIndicator({
     return <span className="sort-indicator inactive" aria-hidden="true" />;
   }
 
-  return (
-    <span className="sort-indicator" aria-hidden="true">
-      {direction === "desc" ? "v" : "^"}
-    </span>
-  );
+  return <span className={`sort-indicator ${direction}`} aria-hidden="true" />;
 }
 
 function PlayerCardPreview({ player }: { player: PlayerCard }) {
@@ -170,6 +191,7 @@ function PlayerCardPreview({ player }: { player: PlayerCard }) {
       <div className="name-strip">{shortCardName(player)}</div>
       <div className="rating-stack">
         <strong>{player.rating}</strong>
+        <span>{potentialRating(player)}</span>
       </div>
       <div className="position-stack">
         <strong>{positionName(player.positionId)}</strong>
@@ -217,6 +239,9 @@ function PlayerRow({
         <b key={key}>{player[key]}</b>
       ))}
       <b>{player.trainingSlots}</b>
+      <b>{potentialRating(player)}</b>
+      <b>{player.career}</b>
+      <b>{salary(player)}</b>
     </button>
   );
 }
@@ -278,7 +303,7 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
           return b.rating - a.rating;
         }
 
-        const statDifference = (a[sortKey] - b[sortKey]) * direction;
+        const statDifference = (sortValue(a, sortKey) - sortValue(b, sortKey)) * direction;
 
         if (statDifference !== 0) {
           return statDifference;
@@ -307,7 +332,15 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
 
   if (players.length === 0) {
     return (
-      <main className="min-h-screen bg-[#eef1f4] p-8 text-[#151515]">
+      <main className="app-shell">
+        <GradientBackground />
+        <BGPattern
+          variant="dots"
+          mask="fade-edges"
+          size={24}
+          fill="rgb(148 163 184 / 0.16)"
+          style={{ zIndex: 0 }}
+        />
         <p className="empty-state">No cards are available.</p>
       </main>
     );
@@ -315,28 +348,18 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
 
   return (
     <main className="app-shell">
-      <header className="site-header">
-        <div className="site-header-inner">
-          <div className="brand-lockup">
-            <Image
-              className="brand-logo"
-              src="/assets/hut-logo.png"
-              alt=""
-              width={34}
-              height={34}
-              priority
-            />
-            <span>NHL 12 HUT Database</span>
-          </div>
-        </div>
-      </header>
-
+      <GradientBackground />
+      <BGPattern
+        variant="dots"
+        mask="fade-edges"
+        size={24}
+        fill="rgb(148 163 184 / 0.16)"
+        style={{ zIndex: 0 }}
+      />
       <div className="page-wrap">
         <section className="hero-copy">
           <h1>Player Card Lookup</h1>
-          <span>
-            Search and explore NHL 12 HUT player cards
-          </span>
+          <p>Search and explore NHL 12 HUT player cards</p>
         </section>
 
         <div className="content-grid">
@@ -431,6 +454,18 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
                   TRN
                   <SortIndicator active={sortKey === "trainingSlots"} direction={sortDirection} />
                 </button>
+                <button onClick={() => changeSort("potentialRating")}>
+                  POT
+                  <SortIndicator active={sortKey === "potentialRating"} direction={sortDirection} />
+                </button>
+                <button onClick={() => changeSort("career")}>
+                  CAR
+                  <SortIndicator active={sortKey === "career"} direction={sortDirection} />
+                </button>
+                <button onClick={() => changeSort("salary")}>
+                  SAL
+                  <SortIndicator active={sortKey === "salary"} direction={sortDirection} />
+                </button>
               </div>
               <div className="player-list">
                 {pagedPlayers.map((player) => (
@@ -508,8 +543,20 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
                     <strong>{positionName(activePlayer.positionId)}</strong>
                   </div>
                   <div className="meta-row">
+                    <span>Career</span>
+                    <strong>{activePlayer.career}</strong>
+                  </div>
+                  <div className="meta-row">
                     <span>Training slots</span>
                     <strong>{activePlayer.trainingSlots}</strong>
+                  </div>
+                  <div className="meta-row">
+                    <span>Potential OVR</span>
+                    <strong>{potentialRating(activePlayer)}</strong>
+                  </div>
+                  <div className="meta-row">
+                    <span>Base salary</span>
+                    <strong>{salary(activePlayer)}</strong>
                   </div>
                 </div>
               </>
@@ -521,6 +568,17 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
             )}
           </aside>
         </div>
+
+        <footer className="site-footer">
+          made by{" "}
+          <a href="https://x.com/9zamm" target="_blank" rel="noreferrer">
+            @9zamm
+          </a>{" "}
+          for{" "}
+          <a href="https://zamboni.gg" target="_blank" rel="noreferrer">
+            zamboni.gg
+          </a>
+        </footer>
       </div>
     </main>
   );
