@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import { BGPattern } from "@/components/ui/bg-pattern";
-import { Component as GradientBackground } from "@/components/ui/gradient-background-4";
 
 export type PlayerCard = {
   id: string;
@@ -154,6 +152,7 @@ function PlayerHeadshot({ player }: { player: PlayerCard }) {
       alt=""
       fill
       sizes="210px"
+      unoptimized
       onError={() => setFailed(true)}
     />
   );
@@ -184,14 +183,28 @@ function SortIndicator({
 
 function PlayerCardPreview({ player }: { player: PlayerCard }) {
   const rareClass = player.legend ? "legend" : player.rare ? "rare" : "base";
+  const displayName = shortCardName(player);
+  const verticalName = rareClass === "rare" || rareClass === "base";
+  const nameLengthClass = verticalName
+    ? displayName.length > 14
+      ? "extra-long"
+      : displayName.length > 10
+        ? "long"
+        : ""
+    : displayName.length > 22
+      ? "extra-long"
+      : displayName.length > 16
+        ? "long"
+        : "";
 
   return (
     <section className={`hut-card ${rareClass}`} aria-label={`${fullName(player)} card preview`}>
       <Image className="hut-card-base" src={cardBase(player)} alt="" fill sizes="340px" priority />
       <div className="card-photo">
+        <Image className="portrait-watermark" src="/assets/hut-logo.png" alt="" fill sizes="220px" />
         <PlayerHeadshot key={player.id} player={player} />
       </div>
-      <div className="name-strip">{shortCardName(player)}</div>
+      <div className={`name-strip ${nameLengthClass}`}>{displayName}</div>
       <div className="rating-stack">
         <strong>{player.rating}</strong>
         <span>{potentialRating(player)}</span>
@@ -384,14 +397,6 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
   if (players.length === 0) {
     return (
       <main className="app-shell">
-        <GradientBackground />
-        <BGPattern
-          variant="dots"
-          mask="fade-edges"
-          size={24}
-          fill="rgb(148 163 184 / 0.16)"
-          style={{ zIndex: 0 }}
-        />
         <p className="empty-state">No cards are available.</p>
       </main>
     );
@@ -399,19 +404,146 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
 
   return (
     <main className="app-shell">
-      <GradientBackground />
-      <BGPattern
-        variant="dots"
-        mask="fade-edges"
-        size={24}
-        fill="rgb(148 163 184 / 0.16)"
-        style={{ zIndex: 0 }}
-      />
       <div className="page-wrap">
-        <section className="hero-copy">
-          <h1>Player Card Lookup</h1>
-          <p>Search and explore NHL 12 HUT player cards</p>
+        <section className="franchise-header" aria-label="Zamboni player lookup">
+          <div className="logo-block">
+            <Image
+              className="franchise-logo"
+              src="/assets/zamboni.png"
+              alt=""
+              width={72}
+              height={72}
+              priority
+            />
+          </div>
+          <div className="brand-block">
+            <h1>ZAMBONI.GG</h1>
+            <p>NHL 12 HUT DATABASE</p>
+          </div>
+          <div className="total-cards">
+            <span>Total Cards</span>
+            <strong>{players.length.toLocaleString()}</strong>
+          </div>
         </section>
+
+        <div className="filters controls-row">
+          <label className="search-field">
+            <SearchIcon />
+            <input
+              value={query}
+              onChange={(event) => {
+                setQuery(event.target.value);
+                setPage(1);
+              }}
+              placeholder="Search players..."
+              aria-label="Search players"
+            />
+          </label>
+          <label>
+            <span className="sr-only">Player type</span>
+            <select
+              value={playerType}
+              onChange={(event) => {
+                setPlayerType(event.target.value);
+                setPosition("all");
+                setNation("all");
+                setPage(1);
+              }}
+            >
+              <option value="skaters">Skaters</option>
+              <option value="goalies">Goalies</option>
+              <option value="all">All players</option>
+            </select>
+          </label>
+          <label>
+            <span className="sr-only">Card tier</span>
+            <select
+              value={tier}
+              onChange={(event) => {
+                setTier(event.target.value);
+                setPage(1);
+              }}
+            >
+              <option value="all">All cards</option>
+              <option value="legend">Legends</option>
+              <option value="rare">Rare</option>
+              <option value="base">Base</option>
+            </select>
+          </label>
+          <label>
+            <span className="sr-only">Position</span>
+            <select
+              value={playerType === "goalies" ? "G" : position}
+              onChange={(event) => {
+                setPosition(event.target.value);
+                setPage(1);
+              }}
+              disabled={playerType === "goalies"}
+            >
+              <option value="all">All positions</option>
+              <option value="C">C</option>
+              <option value="LW">LW</option>
+              <option value="RW">RW</option>
+              <option value="LD">LD</option>
+              <option value="RD">RD</option>
+              <option value="G">G</option>
+            </select>
+          </label>
+          <label>
+            <span className="sr-only">League</span>
+            <select
+              value={league}
+              onChange={(event) => {
+                setLeague(event.target.value);
+                setTeam("all");
+                setPage(1);
+              }}
+            >
+              <option value="all">All leagues</option>
+              {leagues.map((leagueName) => (
+                <option key={leagueName} value={leagueName}>
+                  {leagueName}
+                </option>
+              ))}
+            </select>
+          </label>
+          {league !== "all" ? (
+            <label>
+              <span className="sr-only">Team</span>
+              <select
+                value={team}
+                onChange={(event) => {
+                  setTeam(event.target.value);
+                  setPage(1);
+                }}
+              >
+                <option value="all">All teams</option>
+                {teams.map((teamName) => (
+                  <option key={teamName} value={teamName}>
+                    {teamName}
+                  </option>
+                ))}
+              </select>
+            </label>
+          ) : null}
+          <label>
+            <span className="sr-only">Nation</span>
+            <select
+              value={nation}
+              onChange={(event) => {
+                setNation(event.target.value);
+                setPage(1);
+              }}
+            >
+              <option value="all">All nations</option>
+              {nations.map((nationName) => (
+                <option key={nationName} value={nationName}>
+                  {nationName}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
 
         <div className="content-grid">
           <section className="workspace-panel" aria-label="Player search and results">
@@ -419,125 +551,6 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
               <div>
                 <h2>Player cards</h2>
               </div>
-            </div>
-
-            <div className="filters">
-              <label className="search-field">
-                <SearchIcon />
-                <input
-                  value={query}
-                  onChange={(event) => {
-                    setQuery(event.target.value);
-                    setPage(1);
-                  }}
-                  placeholder="Search players..."
-                  aria-label="Search players"
-                />
-              </label>
-              <label>
-                <span className="sr-only">Player type</span>
-                <select
-                  value={playerType}
-                  onChange={(event) => {
-                    setPlayerType(event.target.value);
-                    setPosition("all");
-                    setNation("all");
-                    setPage(1);
-                  }}
-                >
-                  <option value="skaters">Skaters</option>
-                  <option value="goalies">Goalies</option>
-                  <option value="all">All players</option>
-                </select>
-              </label>
-              <label>
-                <span className="sr-only">Card tier</span>
-                <select
-                  value={tier}
-                  onChange={(event) => {
-                    setTier(event.target.value);
-                    setPage(1);
-                  }}
-                >
-                  <option value="all">All cards</option>
-                  <option value="legend">Legends</option>
-                  <option value="rare">Rare</option>
-                  <option value="base">Base</option>
-                </select>
-              </label>
-              <label>
-                <span className="sr-only">Position</span>
-                <select
-                  value={playerType === "goalies" ? "G" : position}
-                  onChange={(event) => {
-                    setPosition(event.target.value);
-                    setPage(1);
-                  }}
-                  disabled={playerType === "goalies"}
-                >
-                  <option value="all">All positions</option>
-                  <option value="C">C</option>
-                  <option value="LW">LW</option>
-                  <option value="RW">RW</option>
-                  <option value="LD">LD</option>
-                  <option value="RD">RD</option>
-                  <option value="G">G</option>
-                </select>
-              </label>
-              <label>
-                <span className="sr-only">League</span>
-                <select
-                  value={league}
-                  onChange={(event) => {
-                    setLeague(event.target.value);
-                    setTeam("all");
-                    setPage(1);
-                  }}
-                >
-                  <option value="all">All leagues</option>
-                  {leagues.map((leagueName) => (
-                    <option key={leagueName} value={leagueName}>
-                      {leagueName}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              {league !== "all" ? (
-                <label>
-                  <span className="sr-only">Team</span>
-                  <select
-                    value={team}
-                    onChange={(event) => {
-                      setTeam(event.target.value);
-                      setPage(1);
-                    }}
-                  >
-                    <option value="all">All teams</option>
-                    {teams.map((teamName) => (
-                      <option key={teamName} value={teamName}>
-                        {teamName}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-              ) : null}
-              <label>
-                <span className="sr-only">Nation</span>
-                <select
-                  value={nation}
-                  onChange={(event) => {
-                    setNation(event.target.value);
-                    setPage(1);
-                  }}
-                >
-                  <option value="all">All nations</option>
-                  {nations.map((nationName) => (
-                    <option key={nationName} value={nationName}>
-                      {nationName}
-                    </option>
-                  ))}
-                </select>
-              </label>
             </div>
 
             <div className="player-table">
@@ -592,9 +605,6 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
             </div>
 
             <div className="pagination-bar">
-              <span>
-                {pageStart.toLocaleString()}-{pageEnd.toLocaleString()} of {filtered.length.toLocaleString()}
-              </span>
               <div className="pagination-controls">
                 <label>
                   <span className="sr-only">Cards per page</span>
