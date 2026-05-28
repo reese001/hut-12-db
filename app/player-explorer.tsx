@@ -153,6 +153,7 @@ function PlayerHeadshot({ player }: { player: PlayerCard }) {
       fill
       sizes="210px"
       unoptimized
+      loading="eager"
       onError={() => setFailed(true)}
     />
   );
@@ -204,7 +205,7 @@ function PlayerCardPreview({ player }: { player: PlayerCard }) {
         <Image className="portrait-watermark" src="/assets/hut-logo.png" alt="" fill sizes="220px" />
         <PlayerHeadshot key={player.id} player={player} />
       </div>
-      <div className={`name-strip ${nameLengthClass}`}>{displayName}</div>
+      <div className={`name-strip ${nameLengthClass}`}>{displayName.toUpperCase()}</div>
       <div className="rating-stack">
         <strong>{player.rating}</strong>
         <span>{potentialRating(player)}</span>
@@ -549,7 +550,7 @@ export default function PlayerExplorer({ players }: { players: PlayerCard[] }) {
           <section className="workspace-panel" aria-label="Player search and results">
             <div className="section-heading">
               <div>
-                <h2>Player Cards</h2>
+                <h2>PLAYER CARDS</h2>
               </div>
             </div>
 
