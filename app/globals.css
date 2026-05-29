@@ -537,7 +537,6 @@ select option {
   min-height: 0;
   overflow-x: visible;
   overflow-y: auto;
-  padding-bottom: 12px;
   scrollbar-gutter: stable;
   scrollbar-color: rgb(148 163 184 / 0.18) transparent;
   scrollbar-width: thin;
@@ -1622,6 +1621,7 @@ select option {
     display: grid;
     grid-template-columns: minmax(120px, 1fr) repeat(3, auto);
     gap: 10px;
+    width: 100%;
   }
 }
 
@@ -1643,15 +1643,36 @@ select option {
   }
 
   .pagination-controls {
-    grid-template-columns: 1fr auto auto auto;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 8px;
+    font-size: 15px;
+  }
+
+  .pagination-controls label {
+    grid-column: 1 / -1;
+    height: 34px;
+  }
+
+  .pagination-controls label::after {
+    right: 10px;
+  }
+
+  .pagination-controls select {
+    width: 100%;
+    min-width: 0;
+    padding: 0 28px 0 10px;
   }
 
   .pagination-controls button {
-    padding: 0 12px;
+    min-width: 0;
+    min-height: 34px;
+    padding: 0 8px;
+    font-size: 15px;
   }
 
   .pagination-controls strong {
-    min-width: auto;
+    min-width: 64px;
+    font-size: 15px;
     white-space: nowrap;
   }
 

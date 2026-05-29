@@ -1,9 +1,15 @@
 import { readFile } from "node:fs/promises";
+import type { Metadata } from "next";
 import path from "node:path";
-import PlayerExplorer, { type PlayerCard } from "./player-explorer";
+import PlayerExplorer, { type PlayerCard } from "../components/PlayerExplorer";
 
 const cardsPath = path.join(process.cwd(), "public", "assets", "cards.json");
 const idMapsPath = path.join(process.cwd(), "public", "assets", "id-maps.json");
+
+export const metadata: Metadata = {
+  title: "NHL 12 HUT Player Database | Zamboni.gg",
+  description: "Search, filter, sort, and preview NHL 12 Hockey Ultimate Team player cards.",
+};
 
 type RawPlayerCard = {
   card_db_id: number;
